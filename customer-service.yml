@@ -2,7 +2,7 @@ spring:
   datasource:
       username: root
       password: root
-      url: jdbc:mysql://localhost:3306/dnb4
+      url: jdbc:mysql://localhost:3306/customer
   jpa:
     hibernate:
       ddl-auto: update
@@ -12,9 +12,14 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
   jackson:
     serialization:
-      fail-on-empty-beans: false  
+      fail-on-empty-beans: false
+  application:
+    name: customer-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
 server:
-  port: 9000
+  port: 9001
   error:
     include-message: always
 eureka:
