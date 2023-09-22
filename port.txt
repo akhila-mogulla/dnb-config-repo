@@ -1,1 +1,4 @@
 account-service --->9000
+config ---->8888
+discover-service ----> 8761
+customer-service---->9001
