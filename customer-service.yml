@@ -2,7 +2,8 @@ spring:
   datasource:
       username: root
       password: root
-      url: jdbc:mysql://localhost:3306/customer
+      url: jdbc:mysql://${DB_HOST:localhost}:3306/customer?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Turkey
+      # jdbc:mysql://localhost:3306/customer
   jpa:
     hibernate:
       ddl-auto: update
